@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ecofem mx</title>
+
+  <!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
+<link rel="icon" href="Ecofem-logo.jpg">
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+<script>
+  const player = new Plyr('#video-eco');
+</script>
+
+<body>
+
+  <header>
+    TU TIENDA ONLINE DE PRODUCTOS ECOLOGICOS
+  </header>
+
+  <nav>
+<div class="col1">
+  <div class="carrito-box">
+    <a href="carrito.html"><img src="carrito.png" alt="Carrito" class="carrito-icon"></a>
+    <span id="cart-count">0</span>
+  </div>
+</div>
+
+    <div class="col2"> <img src="Ecofem-logo.jpg" alt=""></div>  
+  <div class="col3">
+
+     <a href="https://www.instagram.com/ecofem.6?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="icono circulo"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@emiliogeo71/video/7179141515590077701?q=rata%20vs%20alacrandocumental%20meme&t=1749059389312" class="icono circulo"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.tiktok.com/@malenanegrabella7/video/7194852318762781958?q=rata%20vs%20alacrandocumental%20meme&t=1749059389312" class="icono circulo"><i class="fab fa-tiktok"></i></a>
+    <a href="#" class="icono"><i class="fas fa-user"></i></a>
+    </div>
+  </nav>
+<nav class="menu2">
+    <a href="index.html">Inicio</a>
+    <a href="#productos">Nuestros productos</a>
+    <a href="carrito.html">Carrito</a>
+    <a href="#nosotros">Sobre nosotros</a>
+    <a href="#">Blog</a>
+    <a href="#faq">FAQ</a>
+    <a href="mailto:ecofem.online@gmail.com">Contáctanos</a>
+
+</nav>
+  <section class="hero">
+ <div class="hero-content">
+  <h1>Bienvenido a Ecofem</h1>
+
+  <p>Tu tienda online de productos ecológicos y sostenibles para el cuidado femenino.</p>
+
+  <h1>Conoce nuestros productos</h1>
+
+  <p>Descuentos de hasta el 30% en productos seleccionados.</p>
+
+  <button><a href="#productos">¡Quiero comprar!</a></button>
+</div>
+
+  <div class="hero-image">
+<div style="max-width: 640px; margin: auto; padding: 20px;">
+  <video 
+    id="video-eco"
+    class="plyr"
+    controls 
+    style="width: 100%; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);"
+  >
+    <source src="VideoPromo.mp4" type="video/mp4" />
+    Tu navegador no soporta el video.
+  </video>
+</div>
+
+</div>
+
+</div>
+</section>
+<section class="section">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="card">
+          <span class="card-text"><strong>Unete a la</strong> <br><strong>comunidad</strong></span>
+          <img class="card-image" src="promo4.png" alt="Higiene">
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card">
+          <span class="card-text"><strong>En Oferta</strong></span>
+          <img class="card-image" src="promo1.png" alt="Oferta">
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card">
+          <span class="card-text"><strong>Comprar para regalo</strong></span>
+          <img class="card-image" src="promo2.png" alt="Regalo">
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card">
+          <span class="card-text"><strong>Productos ecológicos</strong></span>
+          <img class="card-image" src="promo3.png" alt="Ecológico">
+        </div>
+      </div>
+    </div>
+    <!-- Paginación y botones -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+
+
+
+<section class="barra" id="productos">
+    <div class="barra-texto">
+        <h2> <center>Productos destacados</center></h2>
+        <p>Descubre nuestros productos más populares y sostenibles.</p>
+    </div>
+</section>
+
+<div class="featured-product" >
+  <img src="Producto1.jpg" alt="Producto 1" />
+  <div class="product-details">
+    <h3>ECOPROTECT</h3>
+    <p class="price">$60.00</p>
+    <p class="desc">Protector de WC ecológico, fabricado con PVA 100%, diseñado para cubrir el asiento del inodoro y prevenir el contacto directo con gérmenes, ofreciendo una barrera higiénica y respetuosa con el medio ambiente.</p>
+    <button class="add-to-cart" 
+      data-name="ECOPROTECT" 
+      data-price="60" 
+      data-img="producto1.jpg">
+      Agregar al carrito
+    </button>
+  </div>
+</div>
+
+<div class="featured-product reverse">
+  <img src="Producto2.jpg" alt="Producto 2" />
+  <div class="product-details">
+    <h3>Toalla Ecológica</h3>
+    <p class="price">$58.00</p>
+    <p class="desc">Toalla femenina ecológica, elaborada con telas orgánicas PVA 100% y libres de químicos, diseñada para brindar comodidad y protección durante el periodo menstrual, reduciendo el impacto ambiental en comparación con productos desechables.</p>
+    <button class="add-to-cart" 
+      data-name="Toalla Ecológica" 
+      data-price="58" 
+      data-img="Producto2.jpg">
+      Agregar al carrito
+    </button>
+  </div>
+</div>
+
+
+
+
+
+  
+
+<section id="nosotros"  class="about-store" style="
+  background: linear-gradient(to right, #f3b6ec, #f4e4f9);
+  padding: 60px 20px;
+  text-align: center;
+  border: 2px solid #d3b3e5;
+  border-radius: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #5a4a68;
+  box-shadow: 0 8px 24px rgba(174, 141, 192, 0.2);
+  max-width: 80%;
+  margin: 40px auto;
+">
+  <h2 style="
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+  ">
+    Conoce Ecofem
+  </h2>
+
+  <p style="
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
+  ">
+    En <strong>Ecofem</strong>, creemos que el cuidado personal y el amor por el planeta pueden ir de la mano. Nuestra misión es empoderar a mujeres como tú con productos ecológicos, reutilizables y diseñados con delicadeza para brindar confort y confianza.
+  </p>
+
+  <p style="
+    font-size: 1.1rem;
+    max-width: 680px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: #7a5a91;
+  ">
+    Cada uno de nuestros productos nace del deseo de crear un cambio positivo. Porque ser consciente, libre y femenina también es una forma de revolucionar el mundo.
+  </p>
+</section>
+
+<section class="faq-section" id="faq" style="
+  max-width: 800px;
+  margin: 60px auto;
+  background: #f9f4fc;
+  border-radius: 20px;
+  border: 2px solid #d3b3e5;
+  box-shadow: 0 6px 18px rgba(154, 128, 191, 0.3);
+  padding: 40px 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #5a4a68;
+">
+  <h2 style="
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #7a4a99;
+  ">Preguntas Frecuentes (FAQ)</h2>
+
+  <div class="faq-item" style="margin-bottom: 20px;">
+    <button class="faq-question" style="
+      width: 100%;
+      background: #ac40c9;
+      border: 2px solid #d3b3e5;
+      border-radius: 15px;
+      padding: 15px 20px;
+      text-align: left;
+      text-shadow: 3px 6px px rgba(255, 255, 255, 0.8);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(138, 93, 181, 0.6);
+      transition: background 0.3s ease;
+    ">¿Cómo cuidar mis productos ecológicos?</button>
+    <div class="faq-answer" style="display: none; padding: 15px 20px; background: #f4e4f9; border-radius: 15px; margin-top: 8px; font-size: 1rem; color: #5a4a68;">
+      Para prolongar la vida útil de tus productos, lávalos con agua tibia y jabón neutro, evita productos abrasivos y guárdalos en un lugar fresco y seco.
+    </div>
+  </div>
+
+  <div class="faq-item" style="margin-bottom: 20px;">
+    <button class="faq-question" style="
+      width: 100%;
+      background: #ac40c9;
+      border: none;
+      border-radius: 15px;
+      padding: 15px 20px;
+      text-align: left;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(138, 93, 181, 0.6);
+      transition: background 0.3s ease;
+    ">¿Cuánto tarda el envío?</button>
+    <div class="faq-answer" style="display: none; padding: 15px 20px; background: #f4e4f9; border-radius: 15px; margin-top: 8px; font-size: 1rem; color: #5a4a68;">
+      El envío estándar tarda entre 3 a 7 días hábiles, dependiendo de tu ubicación. También ofrecemos envíos express en ciertas zonas.
+    </div>
+  </div>
+
+  <div class="faq-item" style="margin-bottom: 20px;">
+    <button class="faq-question" style="
+      width: 100%;
+      background: #ac40c9;
+      border: none;
+      border-radius: 15px;
+      padding: 15px 20px;
+      text-align: left;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(138, 93, 181, 0.6);
+      transition: background 0.3s ease;
+    ">¿Puedo devolver un producto?</button>
+    <div class="faq-answer" style="display: none; padding: 15px 20px; background: #f4e4f9; border-radius: 15px; margin-top: 8px; font-size: 1rem; color: #5a4a68;">
+      Sí, aceptamos devoluciones dentro de los primeros 15 días después de la compra, siempre que el producto esté en condiciones originales y sin uso.
+    </div>
+  </div>
+
+  <div class="faq-item" style="margin-bottom: 20px;">
+    <button class="faq-question" style="
+      width: 100%;
+      background: #ac40c9;
+      border: none;
+      border-radius: 15px;
+      padding: 15px 20px;
+      text-align: left;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(138, 93, 181, 0.6);
+      transition: background 0.3s ease;
+    ">¿Son seguros los materiales?</button>
+    <div class="faq-answer" style="display: none; padding: 15px 20px; background: #f4e4f9; border-radius: 15px; margin-top: 8px; font-size: 1rem; color: #5a4a68;">
+      Absolutamente, todos nuestros productos están fabricados con materiales ecológicos, libres de tóxicos y probados para tu seguridad y confort.
+    </div>
+  </div>
+
+</section>
+
+<script>
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const answer = button.nextElementSibling;
+      const isVisible = answer.style.display === 'block';
+      
+      document.querySelectorAll('.faq-answer').forEach(ans => ans.style.display = 'none');
+      
+      answer.style.display = isVisible ? 'none' : 'block';
+    });
+  });
+</script>
+
+<section class="newsletter" style="
+  background: #a06acb;
+  padding: 40px 20px;
+  border-radius: 20px;
+  max-width: 100%;
+  height: 300px;
+  margin: 40px auto;
+  box-shadow: 0 8px 20px rgba(179,123,204,0.25);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  text-align: center;
+">
+  <h2 style="
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+  ">Únete a Ecofem</h2>
+  <p style="
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    color: #ffffff;
+    line-height: 1.5;
+  ">
+    Suscríbete para recibir novedades, ofertas exclusivas y mucho más.
+  </p>
+  <form action="https://formspree.io/f/mkgbgrqo" method="POST" style="display: inline-block; width: 100%; max-width: 400px;">
+    <input 
+      type="email" 
+      name="email" 
+      placeholder="Ingresa tu correo electrónico" 
+      required
+      style="
+        padding: 14px 18px;
+        width: 100%;
+        border: 2px solid black;
+        border-radius: 40px;
+        font-size: 1rem;
+        color: #000000;
+        outline: none;
+        transition: border-color 0.3s ease;
+      "
+      onfocus="this.style.borderColor='#7a4a99'"
+      onblur="this.style.borderColor='#cda4de'"
+    />
+    <button type="submit" style="
+      margin-top: 20px;
+      background: #ff0000;
+      border: none;
+      padding: 12px 30px;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      border-radius: 40px;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(255, 0, 0, 0.6);
+      transition: background-color 0.3s ease;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    ">
+      Suscribirme
+    </button>
+  </form>
+</section>
+
+
+<footer style="
+  background-color: #e2a4f3;
+  color: #5a4a68;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 4px solid #d3b3e5;
+">
+  <div style="max-width: 900px; margin: auto;">
+
+    <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Ecofem</h3>
+    <p style="font-size: 1rem; margin-bottom: 20px;">
+      Cuidando de ti y del planeta con cada elección consciente.  
+    </p>
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; font-size: 0.95rem; margin-bottom: 30px;">
+
+      <div>
+        <strong>Contacto</strong><br />
+        ecofem.online@gmail.com<br />
+        Tel: +52 777 123 4567<br />
+        Jiutepec, Morelos,  MX
+      </div>
+
+      <div>
+        <strong>Legal</strong><br />
+        <a href="#" style="color: #5a4a68; text-decoration: none;">Aviso de privacidad</a><br />
+        <a href="#" style="color: #5a4a68; text-decoration: none;">Términos y condiciones</a><br />
+        <a href="#" style="color: #5a4a68; text-decoration: none;">Política de devoluciones</a>
+      </div>
+
+      <div>
+        <strong>Gracias especiales</strong><br />
+        A nuestros usuarios, clientes y colaboradores<br />
+        por creer en un mundo más justo y ecológico 🌱 y <br>a Lorenzo Antonio Cardoso Contreras
+      </div>
+
+      <div>
+        <strong>Desarrollador web</strong><br />
+        Diseñado con cariño por<br />
+        <a href="mailto:franflooyt@gmail.com" style="color: #5a4a68; text-decoration: none;">franflooyt@gmail.com</a>
+      </div>
+
+    </div>
+
+    <p style="font-size: 0.9rem; color: #8c729f;">
+      © 2025 Ecofem. Todos los derechos reservados.
+    </p>
+
+  </div>
+</footer>
+
+<script>
+  let cartCount = 0;
+  const cartCountElement = document.getElementById("cart-count");
+  const addToCartButtons = document.querySelectorAll(".add-to-cart");
+
+  function showCartMessage() {
+    const msg = document.getElementById("cart-message");
+    msg.style.display = "block";
+    setTimeout(() => {
+      msg.style.display = "none";
+    }, 2000);
+  }
+
+  if (localStorage.getItem("cart")) {
+    const cart = JSON.parse(localStorage.getItem("cart"));
+    cartCount = cart.length;
+    cartCountElement.textContent = cartCount;
+  }
+
+  addToCartButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const name = button.dataset.name;
+      const price = button.dataset.price;
+      const img = button.dataset.img;
+
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push({ name, price, img });
+      localStorage.setItem("cart", JSON.stringify(cart));
+
+      cartCount++;
+      cartCountElement.textContent = cartCount;
+
+      showCartMessage();
+    });
+  });
+</script>
+
+
+
+<div id="cart-message" style="
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: 1s, translateX(-50%);
+  background-color: #7a4a99;
+  color: white;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  z-index: 9999;
+">
+  Producto agregado al carrito 🛒
+</div>
+
+<div id="whatsapp-support" style="
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: flex;
+  align-items: center;
+  background-color: #25D366;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 40px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: opacity 0.4s ease, transform 0.3s ease;
+">
+  <i class="fab fa-whatsapp" style="font-size: 1.5rem; margin-right: 10px;"></i>
+  Chat de soporte
+</div>
+<script>
+  const supportBtn = document.getElementById('whatsapp-support');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      supportBtn.style.opacity = '0';
+      supportBtn.style.pointerEvents = 'none';
+      supportBtn.style.transform = 'translateY(20px)';
+    } else {
+      supportBtn.style.opacity = '1';
+      supportBtn.style.pointerEvents = 'auto';
+      supportBtn.style.transform = 'translateY(0)';
+    }
+  });
+
+  supportBtn.addEventListener('click', () => {
+    window.open('https://wa.me/527352796437?text=Hola%20Ecofem%2C%20necesito%20soporte%20🌿', '_blank');
+  });
+</script>
+
+
+
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true // Esta línea detiene el autoplay al pasar el mouse
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+</script>
+
+
+</body>
+</html>

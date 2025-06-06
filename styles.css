@@ -1,0 +1,742 @@
+/* Estilos Base (Desktop First - o como lo tenías) */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffeafd;
+    color: #5a4a68;
+}
+
+header {
+    background-color: hsl(291, 100%, 92%);
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* --- Navegación --- */
+nav {
+    background-color: rgb(254, 254, 254);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.iconos-redes {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+}
+
+.icono {
+    font-size: 18px;
+    color: #666;
+    text-decoration: none;
+    transition: color 0.5s, font-size 0.5s, transform 0.5s;
+}
+
+.icono:hover {
+    color: #a06acb;
+    font-size: 30px;
+}
+
+.circulo {
+    transition: 1s;
+    background-color: #e4d1f4;
+    color: #5a4a68;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s, transform 1s;
+}
+
+.circulo:hover {
+    transform: scale(1.5);
+    background-color: #a06acb;
+    color: white;
+}
+
+.col1 {
+    display: flex;
+    align-items: center;
+    transform: scale(1);
+    transform-origin: left center;
+    padding-left: 40px;
+}
+
+.carrito-box {
+    position: relative;
+    width: fit-content;
+}
+
+.carrito-icon {
+    width: 40px;
+    height: 40px;
+}
+
+#cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #a855f7;
+    color: white;
+    font-size: 14px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.col2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.col3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+nav img {
+    height: 200px; /* Esta altura es muy grande para móvil, se ajustará más abajo */
+}
+
+.nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #a06acb;
+    font-weight: bold;
+}
+
+/* --- Menú Secundario --- */
+.menu2 {
+    background-color: #9542a2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    flex-wrap: wrap; /* Permitir que los enlaces se envuelvan en pantallas pequeñas */
+}
+
+.menu2 a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: 0.5s, transform 0.5s;
+}
+
+.menu2 a:hover {
+    color: rgb(53, 14, 54);
+}
+
+/* --- Hero Section --- */
+.hero {
+    background-image: url(FondoFlores.png);
+    background-size: cover; /* Asegura que la imagen de fondo cubra el área */
+    background-position: center; /* Centra la imagen de fondo */
+    padding: 60px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    text-align: left;
+}
+
+.hero-content {
+    background: linear-gradient(to right, #e5d9fe, #F6F4F9);
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    color: #4A4063;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+.hero-content h1:first-of-type {
+    color: #4F1271;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.hero-content button {
+    background-color: #783F8E;
+    color: white;
+    padding: 8px 18px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero-content button a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.hero-content button:hover {
+    background-color: #4F1271;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin: 10px 0;
+    color: #a06acb;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #a06acb;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* --- Secciones Generales y Swiper --- */
+.section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #a06acb;
+}
+
+.swiper {
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    width: 400px; /* Se ajustará en pantallas pequeñas */
+    height: 340px;
+    background-color: #d098fd;
+    border: 8px solid hsl(0, 0%, 99%);
+    border-radius: 20px;
+    box-shadow: 6px 10px 12px rgba(128, 89, 164, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ajustado a 100% para ser responsive */
+    height: 100%; /* Ajustado a 100% para ser responsive */
+    object-fit: cover;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 1s ease;
+}
+
+.card-text {
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    opacity: 1;
+    font-family: serif;
+    font-size: 45px;
+    color: #ffffff;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7);
+}
+
+.card:hover .card-text {
+    opacity: 0;
+}
+
+.card:hover .card-image {
+    opacity: 1;
+}
+
+.barra {
+    width: 100%;
+    height: 150px;
+    background-color: #a06acb;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* --- Productos --- */
+.products-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Esencial para que los productos se envuelvan */
+    margin-top: 30px;
+}
+
+.product {
+    background-color: #f9f4fc;
+    border: 1px solid #d9c2f2;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    width: 220px; /* Se ajustará en pantallas pequeñas */
+    box-shadow: 0 4px 8px rgba(90, 74, 104, 0.1);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.add-to-cart {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #c084fc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7);
+}
+
+.add-to-cart:hover {
+    background-color: #a855f7;
+}
+
+/* --- Productos Destacados --- */
+.featured-product {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fdf7ff;
+    border: 1px solid #e6d0fa;
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 6px 12px rgba(160, 106, 203, 0.1);
+    gap: 100px; /* Se ajustará en pantallas pequeñas */
+    flex-wrap: wrap; /* Imprescindible para que se apilen */
+}
+
+.featured-product.reverse {
+    flex-direction: row-reverse;
+}
+
+.featured-product img {
+    width: 250px; /* Se ajustará en pantallas pequeñas */
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(160, 106, 203, 0.3);
+}
+
+.product-details {
+    max-width: 400px;
+    color: #5a4a68;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.product-details h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.product-details .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-details .desc {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.product-details button {
+    background: #a06acb;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 6px 15px rgba(160, 106, 203, 0.4);
+}
+
+.product-details button:hover {
+    background: #8a4eb5;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #999;
+    background-color: #d8c1e3;
+}
+
+/* =======================================
+   MEDIA QUERIES - HAZ TU PÁGINA RESPONSIVE
+   ======================================= */
+
+/* --- Para pantallas de hasta 768px (Tablets y Móviles grandes) --- */
+@media (max-width: 768px) {
+    /* --- Header y Navegación --- */
+    header {
+        font-size: 18px;
+        padding: 8px;
+    }
+
+    nav {
+        grid-template-columns: 1fr; /* Una sola columna para el menú principal */
+        padding: 10px;
+        flex-direction: column; /* Apilar elementos verticalmente */
+        align-items: center; /* Centrar elementos */
+        gap: 15px; /* Espacio entre los elementos de navegación */
+    }
+
+    .col1, .col2, .col3 {
+        padding: 0; /* Eliminar padding extra */
+        width: 100%; /* Ocupar todo el ancho disponible */
+        justify-content: center; /* Centrar contenido dentro de las columnas */
+    }
+
+    nav img {
+        height: 120px; /* Reducir tamaño del logo */
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap; /* Permitir que los enlaces se envuelvan */
+        justify-content: center;
+        gap: 10px; /* Espacio entre los enlaces de navegación */
+    }
+
+    .nav-links a {
+        margin: 5px 10px;
+        font-size: 14px;
+    }
+
+    .iconos-redes {
+        padding: 10px;
+        justify-content: center; /* Centrar los íconos de redes */
+    }
+
+    .menu2 {
+        flex-direction: column; /* Apilar enlaces verticalmente */
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .menu2 a {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+        grid-template-columns: 1fr; /* Una sola columna para el contenido */
+        padding: 40px 15px;
+        text-align: center; /* Centrar el texto en una sola columna */
+        gap: 30px;
+    }
+
+    .hero-content {
+        padding: 30px 15px;
+    }
+
+    .hero-content h1:first-of-type {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    /* --- Swiper y Cards --- */
+    .section {
+        padding: 30px 15px;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .card {
+        width: 90%; /* Hacer que la tarjeta ocupe más ancho en pantallas pequeñas */
+        height: 280px; /* Ajustar altura */
+        border-width: 4px;
+    }
+
+    .card-text {
+        font-size: 35px; /* Reducir tamaño de fuente */
+        padding: 15px;
+    }
+
+    .barra {
+        height: 100px; /* Reducir altura de la barra */
+        font-size: 20px; /* Reducir tamaño de fuente */
+    }
+
+    /* --- Productos --- */
+    .products-row {
+        gap: 20px; /* Menor espacio entre productos */
+    }
+
+    .product {
+        width: 180px; /* Reducir ancho del producto */
+        padding: 15px;
+    }
+
+    /* --- Productos Destacados --- */
+    .featured-product {
+        flex-direction: column; /* Apilar imagen y detalles */
+        gap: 30px; /* Espacio entre imagen y texto */
+        padding: 20px;
+        max-width: 95%; /* Ocupar más ancho disponible */
+    }
+
+    .featured-product.reverse {
+        flex-direction: column; /* Mantener apilado incluso con reverse */
+    }
+
+    .featured-product img {
+        width: 200px; /* Reducir tamaño de imagen destacada */
+    }
+
+    .product-details {
+        text-align: center; /* Centrar texto en detalles de producto */
+        max-width: 100%;
+    }
+
+    .product-details h3 {
+        font-size: 1.5rem;
+    }
+
+    .product-details .price {
+        font-size: 1.1rem;
+    }
+
+    .product-details .desc {
+        font-size: 0.95rem;
+    }
+
+    /* --- Footer --- */
+    footer {
+        padding: 15px;
+        font-size: 12px;
+    }
+}
+
+/* --- Para pantallas de hasta 480px (Móviles pequeños) --- */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    nav {
+        padding: 5px;
+    }
+
+    nav img {
+        height: 100px; /* Más reducción del logo */
+    }
+
+    .nav-links a {
+        margin: 5px;
+        font-size: 12px;
+    }
+
+    .col1, .col2, .col3 {
+        gap: 10px; /* Menor espacio */
+    }
+
+    .icono {
+        font-size: 16px; /* Ajuste del tamaño de los íconos */
+    }
+    .icono:hover {
+        font-size: 24px; /* Ajuste del tamaño del hover de los íconos */
+    }
+
+    .circulo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .carrito-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    #cart-count {
+        font-size: 12px;
+        padding: 1px 5px;
+    }
+
+    .menu2 a {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+        padding: 30px 10px;
+        gap: 20px;
+    }
+
+    .hero-content {
+        padding: 20px 10px;
+    }
+
+    .hero-content h1:first-of-type {
+        font-size: 24px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .hero button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    /* --- Swiper y Cards --- */
+    .section {
+        padding: 20px 10px;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    .card {
+        width: 100%; /* Ocupar todo el ancho disponible */
+        height: 250px;
+        border-width: 2px;
+    }
+
+    .card-text {
+        font-size: 28px;
+        padding: 10px;
+    }
+
+    .barra {
+        height: 80px;
+        font-size: 16px;
+    }
+
+    /* --- Productos --- */
+    .products-row {
+        gap: 15px;
+    }
+
+    .product {
+        width: 140px; /* Reducir aún más el ancho del producto */
+        padding: 10px;
+    }
+
+    .add-to-cart {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    /* --- Productos Destacados --- */
+    .featured-product {
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .featured-product img {
+        width: 150px; /* Más reducción de la imagen destacada */
+    }
+
+    .product-details h3 {
+        font-size: 1.3rem;
+    }
+
+    .product-details .price {
+        font-size: 1rem;
+    }
+
+    .product-details .desc {
+        font-size: 0.85rem;
+    }
+
+    .product-details button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}

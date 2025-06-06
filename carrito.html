@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi carrito Ecofem.mx</title>
+    <link rel="icon" href="Ecofem-logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .cart-section {
+      padding: 40px;
+      background: #fef9f9;
+      font-family: 'Segoe UI', sans-serif;
+      color: #5a4a68;
+    }
+    .cart-title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .cart-items {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 700px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .cart-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 15px 0;
+      border-bottom: 1px solid #e4d1f4;
+    }
+    .cart-item:last-child {
+      border-bottom: none;
+    }
+    .cart-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    .cart-info {
+      flex-grow: 1;
+    }
+    .remove-btn {
+      background: none;
+      border: none;
+      color: #c0392b;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .total-section {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .clear-btn {
+      background-color: #e4d1f4;
+      color: #5a4a68;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    TU TIENDA ONLINE DE PRODUCTOS ECOLOGICOS
+  </header>
+
+  <nav>
+    <div class="col1">
+<button onclick="location.href='index.html'" style="
+  background: linear-gradient(135deg, #a678d1, #f8a1c4);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(166, 120, 209, 0.6);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none;
+">
+  Volver al inicio
+</button>
+
+<script>
+  const btn = document.querySelector('button');
+  btn.addEventListener('mouseenter', () => {
+    btn.style.background = 'linear-gradient(135deg, #f8a1c4, #a678d1)';
+    btn.style.boxShadow = '0 7px 20px rgba(248, 161, 196, 0.7)';
+  });
+  btn.addEventListener('mouseleave', () => {
+    btn.style.background = 'linear-gradient(135deg, #a678d1, #f8a1c4)';
+    btn.style.boxShadow = '0 5px 15px rgba(166, 120, 209, 0.6)';
+  });
+</script>
+
+    </div>
+    <div class="col2"><img src="Ecofem-logo.jpg" alt=""></div>  
+    <div class="col3">
+
+     <a href="https://www.instagram.com/ecofem.6?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="icono circulo"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@emiliogeo71/video/7179141515590077701?q=rata%20vs%20alacrandocumental%20meme&t=1749059389312" class="icono circulo"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.tiktok.com/@malenanegrabella7/video/7194852318762781958?q=rata%20vs%20alacrandocumental%20meme&t=1749059389312" class="icono circulo"><i class="fab fa-tiktok"></i></a>
+    <a href="#" class="icono"><i class="fas fa-user"></i></a>
+    </div>
+  </nav>
+
+  <nav class="menu2">
+    <h1>Mira los productos antes de comprar</h1>
+  </nav>
+
+  <section class="cart-section">
+    <h1 class="cart-title">Tu carrito de compras</h1>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="total-section">
+      <p><strong>Total: $<span id="total-amount">0</span></strong></p>
+      <button class="clear-btn" onclick="clearCart()">Finalizar Compra</button>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Ecofem. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    const cartContainer = document.getElementById("cart-items");
+    const totalAmountElement = document.getElementById("total-amount");
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    function updateCart() {
+      cartContainer.innerHTML = "";
+      let total = 0;
+
+      if (cart.length === 0) {
+        cartContainer.innerHTML = '<p style="text-align:center; width: 100%">Oops. No hay productos en el carrito.</p>';
+      } else {
+        cart.forEach((item, index) => {
+          const itemDiv = document.createElement("div");
+          itemDiv.className = "cart-item";
+          itemDiv.innerHTML = `
+            <img src="${item.img}" alt="${item.name}" class="cart-img" />
+            <div class="cart-info">
+              <strong>${item.name}</strong><br>
+              Precio: $${item.price}
+            </div>
+            <button class="remove-btn" onclick="removeItem(${index})">Eliminar</button>
+          `;
+          cartContainer.appendChild(itemDiv);
+          total += parseFloat(item.price);
+        });
+      }
+
+      totalAmountElement.textContent = total.toFixed(2);
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      updateCart();
+    }
+
+    function clearCart() {
+      cart = [];
+      localStorage.removeItem("cart");
+      updateCart();
+    }
+
+    updateCart();
+  </script>
+</body>
+</html>
