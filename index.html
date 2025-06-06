@@ -31,14 +31,14 @@
     TU TIENDA ONLINE DE PRODUCTOS ECOLOGICOS
   </header>
 
-  <nav>
+  <!-- Actualizacion del nav principal para versiones moviles -->
+<nav>
 <div class="col1">
   <div class="carrito-box">
     <a href="carrito.html"><img src="carrito.png" alt="Carrito" class="carrito-icon"></a>
     <span id="cart-count">0</span>
   </div>
 </div>
-
     <div class="col2"> <img src="Ecofem-logo.jpg" alt=""></div>  
   <div class="col3">
 
@@ -48,7 +48,12 @@
     <a href="#" class="icono"><i class="fas fa-user"></i></a>
     </div>
   </nav>
-<nav class="menu2">
+<!-- Fin del nav para moviles -->
+
+
+  <!-- Menu compacto para moviles Actualizacino -->
+    <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+  <nav class="menu2">
     <a href="index.html">Inicio</a>
     <a href="#productos">Nuestros productos</a>
     <a href="carrito.html">Carrito</a>
@@ -56,8 +61,12 @@
     <a href="#">Blog</a>
     <a href="#faq">FAQ</a>
     <a href="mailto:ecofem.online@gmail.com">Contáctanos</a>
+  </nav>
+<!-- Fin menu compacto -->
 
-</nav>
+
+
+  
   <section class="hero">
  <div class="hero-content">
   <h1>Bienvenido a Ecofem</h1>
@@ -577,6 +586,18 @@
   });
 </script>
 
+<!-- Script para menu plegable -->
 
+  <script>
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu2');
+
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+</script>
+
+
+  
 </body>
 </html>
