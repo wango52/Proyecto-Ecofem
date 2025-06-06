@@ -31,14 +31,14 @@
     TU TIENDA ONLINE DE PRODUCTOS ECOLOGICOS
   </header>
 
-  <!-- Actualizacion del nav principal para versiones moviles -->
-<nav>
+  <nav>
 <div class="col1">
   <div class="carrito-box">
     <a href="carrito.html"><img src="carrito.png" alt="Carrito" class="carrito-icon"></a>
     <span id="cart-count">0</span>
   </div>
 </div>
+
     <div class="col2"> <img src="Ecofem-logo.jpg" alt=""></div>  
   <div class="col3">
 
@@ -48,11 +48,10 @@
     <a href="#" class="icono"><i class="fas fa-user"></i></a>
     </div>
   </nav>
-<!-- Fin del nav para moviles -->
 
 
-  <!-- Menu compacto para moviles Actualizacino -->
-    <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+  
+  <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
   <nav class="menu2">
     <a href="index.html">Inicio</a>
     <a href="#productos">Nuestros productos</a>
@@ -62,11 +61,9 @@
     <a href="#faq">FAQ</a>
     <a href="mailto:ecofem.online@gmail.com">Contáctanos</a>
   </nav>
-<!-- Fin menu compacto -->
 
 
 
-  
   <section class="hero">
  <div class="hero-content">
   <h1>Bienvenido a Ecofem</h1>
@@ -405,12 +402,16 @@
 <footer style="
   background-color: #e2a4f3;
   color: #5a4a68;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  min-width: auto;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 40px 20px;
   text-align: center;
   border-top: 4px solid #d3b3e5;
 ">
-  <div style="max-width: 900px; margin: auto;">
+  <div style="max-width: auto; margin: auto;" >
 
     <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Ecofem</h3>
     <p style="font-size: 1rem; margin-bottom: 20px;">
@@ -586,9 +587,9 @@
   });
 </script>
 
-<!-- Script para menu plegable -->
 
-  <script>
+
+<script>
   const toggle = document.querySelector('.menu-toggle');
   const menu = document.querySelector('.menu2');
 
@@ -597,7 +598,5 @@
   });
 </script>
 
-
-  
 </body>
 </html>
