@@ -366,6 +366,8 @@ nav img {
 /* --- Productos Destacados --- */
 .featured-product {
     display: flex;
+    width: 80%;
+    margin: 0 auto; /* Centrar en pantallas grandes */
     align-items: center;
     justify-content: center;
     background-color: #fdf7ff;
